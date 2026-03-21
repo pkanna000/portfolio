@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prabhu Kannan — AI/ML architect building agentic systems, RAG pipelines, ML platforms, and governance frameworks. Open-source practitioner and mentor." />
+  <title>Prabhu Kannan — AI/ML Architect & Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#FAFAF8; --bg2:#F2F0EB; --ink:#0F0F0E; --mid:#5A5A55; --faint:#9A9A94;
+      --blue:#1A3A8F; --bluelt:#EEF2FB; --border:rgba(15,15,14,0.09);
+      --card:#FFFFFF; --r:14px; --w:1080px;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    .container{max-width:var(--w);margin:0 auto;padding:0 2rem;}
+    .label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);} 
+    h2.heading{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:400;line-height:1.1;margin-top:.5rem;}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+    .reveal.in{opacity:1;transform:none;}
+    .reveal:nth-child(2){transition-delay:.08s;}.reveal:nth-child(3){transition-delay:.16s;}
+    .reveal:nth-child(4){transition-delay:.24s;}.reveal:nth-child(5){transition-delay:.32s;}
+
+    /* NAV */
+    nav{position:fixed;inset:0 0 auto;z-index:800;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(250,250,248,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+    nav.up{box-shadow:0 4px 28px rgba(0,0,0,.06);} 
+    .nav-mark{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--ink);text-decoration:none;}
+    .nav-right{display:flex;align-items:center;gap:2rem;}
+    .nav-right a{font-size:.82rem;font-weight:400;color:var(--mid);text-decoration:none;letter-spacing:.02em;transition:color .2s;} 
+    .nav-right a:hover{color:var(--ink);} 
+    .nav-pill{background:var(--ink)!important;color:var(--bg)!important;padding:.45rem 1.1rem;border-radius:100px;font-size:.8rem!important;font-weight:500!important;transition:background .2s,transform .15s!important;} 
+    .nav-pill:hover{background:var(--blue)!important;transform:translateY(-1px);} 
+
+    /* HERO */
+    #hero{min-height:100vh;display:flex;align-items:center;padding:7rem 0 5rem;position:relative;overflow:hidden;}
+    #hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 40%,transparent 100%);pointer-events:none;}
+    .hero-inner{display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center;position:relative;}
+    .hero-badge{display:inline-flex;align-items:center;gap:.55rem;background:var(--bluelt);border:1px solid rgba(26,58,143,.18);border-radius:100px;padding:.35rem .9rem;font-size:.74rem;font-weight:500;color:var(--blue);margin-bottom:2rem;}
+    .dot-live{width:7px;height:7px;border-radius:50%;background:#22C55E;animation:blink 2.8s ease-in-out infinite;} 
+    @keyframes blink{0%,100%{opacity:1;}50%{opacity:.4;}} 
+    .hero-h1{font-family:'DM Serif Display',serif;font-size:clamp(3rem,6.5vw,5.8rem);font-weight:400;line-height:1.0;letter-spacing:-.01em;margin-bottom:1.75rem;}
+    .hero-h1 em{font-style:italic;color:var(--blue);} 
+    .hero-sub{font-size:1.05rem;color:var(--mid);line-height:1.8;max-width:490px;margin-bottom:2.5rem;}
+    .hero-sub strong{color:var(--ink);font-weight:500;} 
+    .hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;} 
+    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.72rem 1.6rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:.02em;text-decoration:none;border:none;cursor:pointer;transition:all .2s;} 
+    .btn-dark{background:var(--ink);color:var(--bg);} 
+    .btn-dark:hover{background:var(--blue);transform:translateY(-2px);} 
+    .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(15,15,14,.18);} 
+    .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);} 
+    .hero-cards{display:flex;flex-direction:column;gap:1rem;} 
+    .hcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem 1.6rem;transition:box-shadow .25s,transform .25s;} 
+    .hcard:hover{box-shadow:0 8px 32px rgba(0,0,0,.07);transform:translateY(-2px);} 
+    .hcard-lbl{font-size:.66rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:.5rem;} 
+    .hcard-val{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--ink);line-height:1.35;} 
+    .hcard-sub{font-size:.78rem;color:var(--mid);margin-top:.3rem;} 
+    .hcard-chips{display:flex;gap:.45rem;margin-top:.75rem;flex-wrap:wrap;} 
+    .hchip{font-size:.67rem;font-weight:500;padding:.2rem .6rem;border-radius:100px;background:var(--bg2);color:var(--mid);border:1px solid var(--border);} 
+
+    /* (rest of CSS omitted for brevity) */
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#hero" class="nav-mark">PK</a>
+  <div class="nav-right">
+    <a href="#what" class="nd">What I Do</a>
+    <a href="#field" class="nd">Work</a>
+    <a href="https://github.com/pkanna000" target="_blank" rel="noopener" class="nd">GitHub</a>
+    <a href="#connect" class="nav-pill">Say Hello</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge reveal">
+          <span class="dot-live"></span>
+          AI/ML Architect · Player–Coach
+        </div>
+        <h1 class="hero-h1 reveal">
+          I build AI<br>systems that<br><em>actually ship.</em>
+        </h1>
+        <p class="hero-sub reveal">
+          Most architects advise from a safe distance.
+          I go deep — designing, building, and validating at every layer.
+          <strong>Any scale. Any technology. Production-ready.</strong>
+        </p>
+        <div class="hero-btns reveal">
+          <a href="#what" class="btn btn-dark">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13M1 7H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            See What I Do
+          </a>
+          <a href="https://github.com/pkanna000" target="_blank" rel="noopener" class="btn btn-ghost">
+            Follow on GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="hcard reveal">
+          <div class="hcard-lbl">Current Focus</div>
+          <div class="hcard-val">Agentic Systems & Multi-Agent Orchestration</div>
+          <div class="hcard-sub">Building autonomous agents that reason, act, and self-govern</div>
+          <div class="hcard-chips">
+            <span class="hchip">LangChain</span><span class="hchip">MCP</span><span class="hchip">Spring AI</span>
+          </div>
+        </div>
+        <!-- content truncated for brevity -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="fi">
+      <span class="fn">Prabhu Kannan</span>
+      <div class="fl">
+        <a href="#what">What I Do</a>
+        <a href="#field">Work</a>
+        <a href="https://github.com/pkanna000" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/prabhukannan" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <span style="font-size:.73rem;">Mount Laurel, NJ</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
