@@ -51,6 +51,8 @@
     .btn-dark:hover{background:var(--blue);transform:translateY(-2px);}
     .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(15,15,14,.18);}
     .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);}
+    .hero-platforms{display:flex;gap:1.5rem;margin-top:1.25rem;flex-wrap:wrap;}
+    .hero-platforms span{font-size:.76rem;font-weight:400;color:var(--faint);letter-spacing:.03em;}
     .hero-cards{display:flex;flex-direction:column;gap:1rem;}
     .hcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem 1.6rem;transition:box-shadow .25s,transform .25s;}
     .hcard:hover{box-shadow:0 8px 32px rgba(0,0,0,.07);transform:translateY(-2px);}
@@ -207,7 +209,7 @@
         <p class="hero-sub reveal">
           Most architects advise from a safe distance.
           I go deep — designing, building, and validating at every layer.
-          <strong>Any scale. Any technology. Production-ready.</strong>
+          <strong>Multi-cloud. Any scale. Production-ready.</strong>
         </p>
         <div class="hero-btns reveal">
           <a href="#what" class="btn btn-dark">
@@ -219,14 +221,17 @@
             Follow on GitHub
           </a>
         </div>
+        <div class="hero-platforms reveal">
+          <span>AWS</span><span>·</span><span>Azure</span><span>·</span><span>GCP</span><span>·</span><span>Databricks</span><span>·</span><span>Snowflake</span>
+        </div>
       </div>
       <div class="hero-cards">
         <div class="hcard reveal">
           <div class="hcard-lbl">Current Focus</div>
-          <div class="hcard-val">Agentic Systems & Multi-Agent Orchestration</div>
-          <div class="hcard-sub">Building autonomous agents that reason, act, and self-govern</div>
+          <div class="hcard-val">Agentic AI — Orchestration to Governance</div>
+          <div class="hcard-sub">Making multi-agent systems production-safe: trust frameworks, tool-use guardrails, and autonomous observability</div>
           <div class="hcard-chips">
-            <span class="hchip">LangChain</span><span class="hchip">MCP</span><span class="hchip">Spring AI</span>
+            <span class="hchip">LangChain</span><span class="hchip">LangGraph</span><span class="hchip">MCP Protocol</span><span class="hchip">Google ADK</span>
           </div>
         </div>
         <div class="hcard reveal">
@@ -303,7 +308,7 @@
         <div class="w-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.7-1.4 2.4l-2-.5m-11 0l-2 .5c-1.43.3-2.4-1.4-1.4-2.4L5 14.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="w-title">Agentic AI Systems</div>
         <div class="w-body">Multi-agent orchestration frameworks — memory, reasoning, tool-use, and autonomous governance. I build the agents, not just describe them.</div>
-        <div class="w-tags"><span class="w-tag">LangChain</span><span class="w-tag">MCP Protocol</span><span class="w-tag">Spring AI</span><span class="w-tag">Copilot</span></div>
+        <div class="w-tags"><span class="w-tag">LangChain</span><span class="w-tag">LangGraph</span><span class="w-tag">MCP Protocol</span><span class="w-tag">Google ADK</span></div>
       </div>
 
       <div class="wcard reveal">
@@ -352,7 +357,7 @@
       <div class="approach-left">
         <p class="label reveal">My Approach</p>
         <h2 class="heading reveal">How I<br>Think &<br>Work</h2>
-        <p class="approach-blurb reveal">I've run architecture reviews on 100+ tools and built production systems from scratch. Here's the thinking that connects both ends of that spectrum.</p>
+        <p class="approach-blurb reveal">I've run architecture reviews across dozens of platforms and built production systems from scratch. Here's the thinking that connects both ends of that spectrum.</p>
       </div>
       <div class="steps">
         <div class="step reveal"><div class="s-num">01</div><div><div class="s-title">Understand the real problem</div><div class="s-body">Most AI failures are problem-framing failures. Before touching a model, I spend time on what the business actually needs vs. what they think they need.</div></div></div>
