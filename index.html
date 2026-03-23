@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prabhu Kannan — AI/ML Architect & Builder</title>
+  <title>Prabhu Kannan — Enterprise AI Architect & Builder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -117,6 +117,12 @@
     .f-link:hover{gap:.65rem;}
     .f-link svg{width:13px;height:13px;flex-shrink:0;}
 
+    /* CERTIFICATIONS STRIP */
+    #certs{padding:2.5rem 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .cert-list{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1rem;}
+    .cert-chip{font-size:.72rem;font-weight:500;padding:.35rem .85rem;border-radius:100px;background:var(--card);color:var(--mid);border:1px solid var(--border);transition:border-color .2s,color .2s;}
+    .cert-chip:hover{border-color:var(--blue);color:var(--blue);}
+
     /* COMMUNITY */
     #comm{padding:6rem 0;background:var(--bg2);}
     .comm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;}
@@ -193,7 +199,7 @@
       <div>
         <div class="hero-badge reveal">
           <span class="dot-live"></span>
-          AI/ML Architect · Player–Coach
+          Enterprise AI Architect · Telecom · Healthcare · Media · AdTech
         </div>
         <h1 class="hero-h1 reveal">
           I build AI<br>systems that<br><em>actually ship.</em>
@@ -224,9 +230,9 @@
           </div>
         </div>
         <div class="hcard reveal">
-          <div class="hcard-lbl">Builder Philosophy</div>
-          <div class="hcard-val">"If I can't build it myself, I won't architect it for you."</div>
-          <div class="hcard-sub">25 years · IC-level depth · Enterprise-scale judgment</div>
+          <div class="hcard-lbl">Credentials</div>
+          <div class="hcard-val">MBA, Jack Welch Management Institute</div>
+          <div class="hcard-sub">B.Eng Electronics &amp; Instrumentation · 25 years in production systems</div>
         </div>
         <div class="hcard reveal">
           <div class="hcard-lbl">Open to</div>
@@ -238,6 +244,24 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <div class="container" style="text-align:center;">
+    <p class="label reveal">Verified Credentials</p>
+    <div class="cert-list reveal">
+      <span class="cert-chip">Salesforce Agentforce Specialist</span>
+      <span class="cert-chip">Oracle Multicloud Architect</span>
+      <span class="cert-chip">Oracle AI Vector Search</span>
+      <span class="cert-chip">Oracle GenAI Professional</span>
+      <span class="cert-chip">AWS Solutions Architect</span>
+      <span class="cert-chip">Databricks Platform Architect</span>
+      <span class="cert-chip">TOGAF Foundation</span>
+      <span class="cert-chip">Salesforce Data Cloud</span>
+      <span class="cert-chip">Pendo AI for Product</span>
     </div>
   </div>
 </section>
@@ -313,7 +337,7 @@
       <div class="wcard reveal">
         <div class="w-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="w-title">Mentorship & Team Building</div>
-        <div class="w-body">Turning experimental concepts into production features, and engineers into architects — through design clinics, structured learning, and hands-on pairing.</div>
+        <div class="w-body">Turning experimental concepts into production features, and engineers into architects — through design clinics, structured learning, and hands-on pairing. Multiple direct reports promoted to principal-level roles.</div>
         <div class="w-tags"><span class="w-tag">Architecture Clinics</span><span class="w-tag">AI Upskilling</span><span class="w-tag">Player–Coach</span></div>
       </div>
 
@@ -352,7 +376,7 @@
       <div class="fcard wide reveal">
         <p class="f-eye">Agentic Architecture</p>
         <h3 class="f-title">Building Multi-Agent Systems That Actually Govern Themselves</h3>
-        <p class="f-body">The hardest part of agentic AI isn't getting the first agent to work — it's making 10 agents work together without chaos. This means designing clear responsibility boundaries, implementing tool-use guardrails, and building observability into every layer so you can see what the system is "thinking" before it acts. Copilot auto-governance patterns can eliminate manual approval bottlenecks entirely when the trust framework is designed right.</p>
+        <p class="f-body">The hardest part of agentic AI isn't getting the first agent to work — it's making 10 agents work together without chaos. This means designing clear responsibility boundaries, implementing tool-use guardrails aligned with OWASP Top 10 for LLM security, and building observability into every layer so you can see what the system is "thinking" before it acts. Auto-governance patterns can eliminate manual approval bottlenecks entirely when the trust framework is designed right.</p>
         <div class="f-chips"><span class="chip">Orchestration patterns</span><span class="chip">Tool-use boundaries</span><span class="chip">Agent observability</span><span class="chip">LangChain</span><span class="chip">MCP Protocol</span></div>
         <a href="https://github.com/pkanna000/agent-governance-toolkit" target="_blank" rel="noopener" class="f-link">View Agent Governance Toolkit on GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
@@ -367,7 +391,7 @@
       <div class="fcard reveal">
         <p class="f-eye">LLM Cost Architecture</p>
         <h3 class="f-title">Dual-Gateway LLM Routing for Cost & Latency Control</h3>
-        <p class="f-body">Running one frontier model for everything is expensive and slow. A dual-gateway pattern routes by complexity — simple queries to smaller, faster models, complex reasoning to frontier models — while maintaining full security and auditability. This pattern cuts inference costs dramatically at scale.</p>
+        <p class="f-body">Running one frontier model for everything is expensive and slow. A dual-gateway pattern routes by complexity — simple queries to smaller, faster models, complex reasoning to frontier models — while maintaining full security and auditability. The result: cost turns from a scaling problem into a routing problem, and latency meets SLA by design rather than by luck.</p>
         <div class="f-chips"><span class="chip">Gateway routing</span><span class="chip">Cost optimization</span><span class="chip">MuleSoft Flex</span><span class="chip">Latency budgets</span></div>
       </div>
 
@@ -394,6 +418,7 @@
   <div class="container">
     <p class="label reveal">Beyond the Day Job</p>
     <h2 class="heading reveal">Community &<br>Continuous Learning</h2>
+    <p style="font-size:1rem;color:var(--mid);margin-top:.75rem;max-width:540px;" class="reveal">Open-source contributor and community builder — sharing architecture patterns, governance frameworks, and starter kits for the practitioner community.</p>
     <div class="comm-grid">
       <div class="ccard reveal"><div class="c-yr">2025</div><div class="c-title">Perplexity AI Business Fellowship</div><div class="c-body">Selected cohort member — exploring AI search, enterprise knowledge, and agentic workflows alongside leading practitioners.</div></div>
       <div class="ccard reveal"><div class="c-yr">2026</div><div class="c-title">Google AI Agents Workshop, NYC</div><div class="c-body">Advancing hands-on knowledge of agentic AI patterns alongside practitioners from across the industry.</div></div>
