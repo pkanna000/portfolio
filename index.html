@@ -1,3 +1,4 @@
+<!-- Portfolio v2 - updated March 2026 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -233,6 +234,7 @@
           <div class="hcard-chips">
             <span class="hchip">LangChain</span><span class="hchip">LangGraph</span><span class="hchip">MCP Protocol</span><span class="hchip">Google ADK</span>
           </div>
+          <div class="hcard-sub" style="margin-top:.5rem;">Active focus: multi-agent fabric patterns, dual-gateway architecture, and composable governance.</div>
         </div>
         <div class="hcard reveal">
           <div class="hcard-lbl">Credentials</div>
@@ -258,13 +260,13 @@
   <div class="container" style="text-align:center;">
     <p class="label reveal">Verified Credentials</p>
     <div class="cert-list reveal">
+      <span class="cert-chip">AWS Solutions Architect</span>
+      <span class="cert-chip">TOGAF Foundation</span>
+      <span class="cert-chip">Databricks Platform Architect</span>
       <span class="cert-chip">Salesforce Agentforce Specialist</span>
       <span class="cert-chip">Oracle Multicloud Architect</span>
       <span class="cert-chip">Oracle AI Vector Search</span>
       <span class="cert-chip">Oracle GenAI Professional</span>
-      <span class="cert-chip">AWS Solutions Architect</span>
-      <span class="cert-chip">Databricks Platform Architect</span>
-      <span class="cert-chip">TOGAF Foundation</span>
       <span class="cert-chip">Salesforce Data Cloud</span>
       <span class="cert-chip">Pendo AI for Product</span>
     </div>
@@ -365,6 +367,7 @@
         <div class="step reveal"><div class="s-num">03</div><div><div class="s-title">Design for the team, not just the system</div><div class="s-body">A technically perfect architecture that no one can operate is a liability. I design with the actual team's capabilities in mind — and build the capability gap into the delivery plan.</div></div></div>
         <div class="step reveal"><div class="s-num">04</div><div><div class="s-title">Govern without killing velocity</div><div class="s-body">The best governance frameworks I've built were ones teams actually wanted to follow — because they removed friction, not added it.</div></div></div>
         <div class="step reveal"><div class="s-num">05</div><div><div class="s-title">Share what I learn</div><div class="s-body">If something I built can save someone else 3 weeks, that's more valuable than keeping it proprietary. Open contribution is a professional obligation, not just a hobby.</div></div></div>
+        <div class="step reveal"><div class="s-num">06</div><div><div class="s-title">Govern without touching agent code</div><div class="s-body">The most durable governance pattern I've built wraps infrastructure rather than embedding in application logic — agents don't know they're being governed, they just call their normal methods. The governance engine intercepts. This means policies change without touching agent code, the same layer applies across different frameworks, and governance can be tested independently.</div></div></div>
       </div>
     </div>
   </div>
@@ -378,10 +381,24 @@
     <p style="font-size:1rem;color:var(--mid);margin-top:.75rem;max-width:520px;" class="reveal">Patterns and problems I've worked through — framed as learnings, not as company property.</p>
     <div class="field-grid">
 
+      <div class="fcard reveal">
+        <p class="f-eye">Agent Architecture</p>
+        <h3 class="f-title">Agent Fabric Reference: Production AI Patterns Built Failure-First</h3>
+        <p class="f-body">Most agent demos show the happy path. This reference starts at the failure — every demo has a Stage 0 that shows what breaks before Stage 1 shows the production fix. Covers the patterns that actually matter in enterprise deployments: cost-optimized model routing (70% cost reduction via 4-tier complexity scoring), circuit breakers and cascade isolation, human-in-the-loop governance with SOX-compliant audit trails, PII redaction with GDPR audit logs, RBAC with a four-layer agentic identity model, streaming with token budget enforcement, and semantic version pinning for model reproducibility. Dual-gateway architecture (separate LLM and API gateways) documented in full ADRs. OpenTelemetry instrumentation on every layer. All 10 demos working.</p>
+        <div class="f-chips"><span class="chip">Google ADK</span><span class="chip">MS Agent Framework</span><span class="chip">OpenTelemetry</span><span class="chip">HITL Governance</span><span class="chip">Dual Gateway</span><span class="chip">Failure-First</span></div>
+      </div>
+
+      <div class="fcard reveal">
+        <p class="f-eye">Enterprise Architecture</p>
+        <h3 class="f-title">Enterprise Architecture Portal — AI-Native EA Intelligence Platform</h3>
+        <p class="f-body">Designed and built an internal enterprise architecture intelligence platform consolidating a multi-year capability and system landscape roadmap, AI tool inventory, application rationalization (TIME disposition), ADR governance outputs, C4 architecture diagrams, SDLC AI enablement mapping, and technology stack inventory into a single living reference. Adopted org-wide as the authoritative source of record for architecture decisions, portfolio strategy, and AI tooling across the enterprise.</p>
+        <div class="f-chips"><span class="chip">Azure AI</span><span class="chip">GitHub Copilot</span><span class="chip">C4 Model</span><span class="chip">ADRs</span><span class="chip">App Rationalization</span><span class="chip">TOGAF</span></div>
+      </div>
+
       <div class="fcard wide reveal">
         <p class="f-eye">Agentic Architecture</p>
         <h3 class="f-title">Building Multi-Agent Systems That Actually Govern Themselves</h3>
-        <p class="f-body">The hardest part of agentic AI isn't getting the first agent to work — it's making 10 agents work together without chaos. This means designing clear responsibility boundaries, implementing tool-use guardrails aligned with OWASP Top 10 for LLM security, and building observability into every layer so you can see what the system is "thinking" before it acts. Auto-governance patterns can eliminate manual approval bottlenecks entirely when the trust framework is designed right.</p>
+        <p class="f-body">The hardest part of agentic AI isn't getting the first agent to work — it's making 10 agents work together without chaos. This means designing clear responsibility boundaries, implementing tool-use guardrails aligned with OWASP Top 10 for LLM security, and building observability into every layer so you can see what the system is "thinking" before it acts. Auto-governance patterns can eliminate manual approval bottlenecks entirely when the trust framework is designed right. The composable governance pattern — where governance wraps infrastructure rather than embedding in it — is the architectural decision that makes this sustainable at org scale.</p>
         <div class="f-chips"><span class="chip">Orchestration patterns</span><span class="chip">Tool-use boundaries</span><span class="chip">Agent observability</span><span class="chip">LangChain</span><span class="chip">MCP Protocol</span></div>
         <a href="https://github.com/pkanna000/agent-governance-toolkit" target="_blank" rel="noopener" class="f-link">View Agent Governance Toolkit on GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
